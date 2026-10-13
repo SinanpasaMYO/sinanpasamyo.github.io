@@ -1,443 +1,772 @@
 <!doctype html>
-<html>
+<html lang="tr">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-            <title>Sinanpaşa MYO 2025-2026 Oryantasyon Çalışması</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=1024" />
+<title>Sinanpaşa MYO 2026-2027 Uyum (Oryantasyon) Programı</title>
 <style>
-body{
-	background-color: #dfdfdf;
+body {
+	background: radial-gradient(circle at center, #f4f7fb 0%, #cfd8e3 100%);
+	font-family: "Segoe UI", Arial, sans-serif;
+	margin: 0;
+	min-height: 100vh;
 }
 .box {
 	display: block;
 	width: 1024px;
-	height: 768px;	
-	background-color: #DFDFDF;
-	box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
-	border: 1px solid rgba(0, 0, 0, .3);
+	height: 768px;
+	box-sizing: border-box;
+	padding: 28px 40px;
+	background-color: #ffffff;
+	box-shadow: 0 6px 24px rgba(0, 0, 0, .15);
+	border: 1px solid rgba(0, 0, 0, .15);
 	border-radius: 20px;
-	text-shadow: 0 2px 2px rgba(0, 0, 0, .1);
-	font-family: Arial, sans-serif;
-	font-size: 40px;
-	color: rgb(102, 102, 102);
+	font-size: 24px;
+	line-height: 1.4;
+	color: #3a3a3a;
+	position: relative;
+	overflow: hidden;
 }
+/* impress.js: aktif olmayan slaytlar soluk görünsün */
+.impress-enabled .step { opacity: .25; transition: opacity 1s; }
+.impress-enabled .step.active { opacity: 1; }
 
-
-.componentContainer {
-    position: absolute;
-    line-height: normal;
-    /*-webkit-transform-origin: 135% 135%;
-    -moz-transform-origin: 135% 135%;
-    transform-origin: 135% 135%;*/
+.baslik {
+	font-size: 30px;
+	font-weight: 700;
+	color: #005e9c;
+	border-bottom: 3px solid #005e9c;
+	padding-bottom: 8px;
+	margin-bottom: 16px;
 }
-
-.transformContainer {
-    -webkit-transform-origin: 0 0;
-    -moz-transform-origin: 0 0;
-    transform-origin: 0 0;
+.baslik a { color: #005e9c; text-decoration: none; }
+.baslik a:hover { text-decoration: underline; }
+.baslik .no {
+	display: inline-block;
+	min-width: 44px;
+	padding: 0 8px;
+	margin-right: 10px;
+	border-radius: 8px;
+	background: #005e9c;
+	color: #fff;
+	text-align: center;
+	font-size: 24px;
 }
-
-.bg {
-    width: 100%;
-    height: 100%;
+.altbaslik { font-size: 20px; color: #666; margin: -8px 0 12px 0; }
+a { color: #0b6bb5; }
+ul { margin: 6px 0; padding-left: 28px; }
+li { margin: 5px 0; }
+.kucuk { font-size: 20px; }
+.cokkucuk { font-size: 17px; }
+.vurgu { color: #c0392b; font-weight: 700; }
+.not {
+	background: #eef6fc;
+	border-left: 6px solid #005e9c;
+	border-radius: 8px;
+	padding: 10px 16px;
+	margin-top: 14px;
+	font-size: 20px;
 }
+.iki-sutun { display: flex; gap: 28px; }
+.iki-sutun > div { flex: 1; }
+.kart {
+	background: #f6f9fc;
+	border: 1px solid #d5e3f0;
+	border-radius: 14px;
+	padding: 14px 18px;
+}
+.kart h3 { margin: 0 0 8px 0; color: #005e9c; font-size: 24px; }
+.cerceve {
+	width: 944px;
+	height: 620px;
+	border: 1px solid #bbb;
+	border-radius: 10px;
+	background: #fafafa;
+}
+.cerceve.kisa { height: 470px; }
+.merkez { text-align: center; }
+.logolar { display: flex; align-items: center; justify-content: center; gap: 40px; }
+.logolar img { max-height: 150px; }
+table.notlar { border-collapse: collapse; width: 100%; font-size: 20px; }
+table.notlar th, table.notlar td { border: 1px solid #c9d6e3; padding: 5px 10px; text-align: center; }
+table.notlar th { background: #005e9c; color: #fff; }
+table.notlar tr.basarisiz td { background: #fdecea; }
+table.notlar tr.sartli td { background: #fff6e0; }
+.akis { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; font-size: 19px; }
+.akis span {
+	background: #005e9c;
+	color: #fff;
+	border-radius: 10px;
+	padding: 8px 12px;
+}
+.akis b { color: #005e9c; font-size: 26px; }
+.gundem { columns: 2; column-gap: 30px; font-size: 19px; padding-left: 26px; margin: 0; }
+.gundem li { margin: 3px 0; break-inside: avoid; }
+
+/* impress.js ilerleme çubuğu ve slayt sayacı eklentileri */
+.impress-progressbar { position: fixed; left: 0; right: 0; bottom: 0; height: 6px; background: rgba(0,0,0,.08); }
+.impress-progressbar div { height: 6px; width: 0; background: #005e9c; transition: width 1s linear; }
+.impress-progress { position: fixed; right: 14px; bottom: 12px; font-size: 16px; color: #555; }
 </style>
 </head>
-<body>
+<body class="impress-not-supported">
 
-<div id="impress">
+<div id="impress" data-transition-duration="1000">
 
-<div class="step box" data-x="0" data-y="0">
+<!-- ======================= KAPAK ======================= -->
+<div class="step box merkez" id="kapak">
+	<div class="logolar" style="margin-top: 10px;">
+		<img src="https://kutuphane.aku.edu.tr/wp-content/uploads/sites/122/2015/11/cropped-akulogo-gif.gif" alt="AKÜ Logo">
+		<img src="https://sinanpasamyo.aku.edu.tr/wp-content/uploads/sites/14/2023/03/SPMYO_Logo.png" alt="Sinanpaşa MYO Logo">
+	</div>
+	<div style="font-size: 34px; font-weight: 700; color: #333; margin-top: 18px; line-height: 1.3;">
+		T.C.<br>AFYON KOCATEPE ÜNİVERSİTESİ<br>SİNANPAŞA MESLEK YÜKSEKOKULU
+	</div>
+	<div style="font-size: 26px; color: #005e9c; margin-top: 6px;">Bilgisayar Teknolojileri Bölümü</div>
+	<div style="font-size: 36px; font-weight: 700; color: #005e9c; margin-top: 22px;">
+		2026 – 2027 EĞİTİM-ÖĞRETİM YILI<br>UYUM (ORYANTASYON) PROGRAMI
+	</div>
+	<div style="font-size: 24px; margin-top: 18px;">
+		Bilgisayar Programcılığı ve İnternet ve Ağ Teknolojileri Programları<br>1. Sınıf Öğrencileri
+	</div>
+	<div style="font-size: 24px; margin-top: 16px; color: #c0392b; font-weight: 700;">14 Ekim 2026 Çarşamba – Saat 15.00</div>
+	<div style="font-size: 20px; margin-top: 10px; color: #777;">https://sinanpasamyo.github.io</div>
+</div>
 
+<!-- ======================= HOŞ GELDİNİZ / DANIŞMANLAR ======================= -->
+<div class="step box">
+	<div class="baslik">Hoş Geldiniz!</div>
+	<p>Sinanpaşa Meslek Yüksekokulu ailesine katıldığınız için mutluyuz. Bu programda, öğrenim hayatınız boyunca ihtiyaç duyacağınız temel bilgileri, kurallar ve olanakları birlikte inceleyeceğiz.</p>
+	<div class="iki-sutun" style="margin-top: 20px;">
+		<div class="kart">
+			<h3>Bilgisayar Programcılığı Programı</h3>
+			<div>1. Sınıf Akademik Danışmanı</div>
+			<div style="font-size: 28px; font-weight: 700; margin-top: 8px;">Öğr. Gör. Turgay TAYMAZ</div>
+		</div>
+		<div class="kart">
+			<h3>İnternet ve Ağ Teknolojileri Programı</h3>
+			<div>1. Sınıf Akademik Danışmanı</div>
+			<div style="font-size: 28px; font-weight: 700; margin-top: 8px;">Öğr. Gör. Kadir ÇIRAY</div>
+		</div>
+	</div>
+	<div class="not">Bölümümüzde görev yapan tüm öğretim elemanlarımızı <a href="https://sinanpasamyo.aku.edu.tr/akademik-birimler/" target="_blank">Akademik Kadro</a> sayfasından tanıyabilirsiniz. Her türlü akademik sorununuzda ilk başvuru noktanız <b>akademik danışmanınızdır</b>.</div>
+</div>
 
-    <div class="componentContainer " style="top: 35px; left: 104px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
-        <div class="transformContainer" style="-webkit-transform: scale(1, 1);
-        -moz-transform: scale(1, 1);
-        transform: scale(1, 1)">
-        <div style="font-size: 48px;" class="antialias">
-        <div align="center">T.C.</div><div align="center">AFYON KOCATEPE ÜNİVERSİTESİ</div><div align="center">SİNANPAŞA MESLEK YÜKSEKOKULU<br></div>
-        </div>
-        </div>
-        </div>
+<!-- ======================= GÜNDEM ======================= -->
+<div class="step box">
+	<div class="baslik">Program Akışı (Gündem)</div>
+	<ol class="gundem">
+		<li>Üniversite, birim ve program organizasyon şeması</li>
+		<li>Üniversite ve şehir tanıtımı</li>
+		<li>Programlarımız, müfredat, uygulamalı dersler ve staj</li>
+		<li>Ders kaydından yarıyıl sonu sınavlarına bir dönem</li>
+		<li>Eğitim-Öğretim ve Sınav Yönetmeliği (devamsızlık, başarı, kayıt dondurma, muafiyet)</li>
+		<li>Diğer yönetmelik ve yönergeler</li>
+		<li>Öğrenci disiplin süreçleri</li>
+		<li>Akademik danışmanlık hizmetleri</li>
+		<li>Çift anadal / yandal / yatay geçiş</li>
+		<li>Muafiyet sınavları</li>
+		<li>Öğrenci Bilgi Sistemi ve mobil uygulama</li>
+		<li>Uzaktan öğretim sistemi ve sınavlar</li>
+		<li>Kaynak kitaplar ve kütüphane</li>
+		<li>Kampüste internet erişimi ve e-posta</li>
+		<li>İş sağlığı ve güvenliği, acil durumlar</li>
+		<li>Öğrenci kulüp ve toplulukları</li>
+		<li>Akreditasyon ve kalite süreçleri</li>
+		<li>TEKNOFEST çalışmaları</li>
+		<li>Sosyal yaşam alanları, kongre ve kültür merkezleri</li>
+		<li>Bağımlılıkla mücadele</li>
+		<li>Siber güvenlik</li>
+		<li>Rehberlik hizmetleri (psikolog, diyetisyen)</li>
+		<li>Kariyer Kapısı ve Yetenek Kapısı</li>
+		<li>Öğrenci değişim programları (Erasmus+, Farabi, Mevlâna)</li>
+	</ol>
+</div>
 
+<!-- ======================= 1. ORGANİZASYON ======================= -->
+<div class="step box">
+	<div class="baslik"><span class="no">1</span><a href="https://aku.edu.tr/rektorluk/rektorlukyonetim/organizasyon-semasi/" target="_blank">Afyon Kocatepe Üniversitesi Organizasyon Şeması</a></div>
+	<iframe class="cerceve" src="https://aku.edu.tr/rektorluk/rektorlukyonetim/organizasyon-semasi/"></iframe>
+</div>
 
+<div class="step box">
+	<div class="baslik"><span class="no">1</span><a href="https://sinanpasamyo.aku.edu.tr/organizasyon-semasi/" target="_blank">Sinanpaşa MYO Organizasyon Şeması</a></div>
+	<iframe class="cerceve" src="https://sinanpasamyo.aku.edu.tr/organizasyon-semasi/"></iframe>
+</div>
 
-        <div class="componentContainer " style="top: 266px; left: 117px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: 791px; height: 254.88px;">
-            <div class="transformContainer" style="-webkit-transform: scale(0.68, 0.68);  -moz-transform: scale(0.68, 0.68);   transform: scale(0.68, 0.68)">
-            <img src="https://sinanpasamyo.aku.edu.tr/wp-content/uploads/sites/14/2015/12/5.jpeg">
-            </div>
-            </div>
+<!-- ======================= 2. ÜNİVERSİTE VE ŞEHİR ======================= -->
+<div class="step box">
+	<div class="baslik"><span class="no">2</span><a href="https://oryantasyon.aku.edu.tr/" target="_blank">AKÜ Oryantasyon Sayfası – oryantasyon.aku.edu.tr</a></div>
+	<iframe class="cerceve" src="https://oryantasyon.aku.edu.tr/"></iframe>
+</div>
 
+<div class="step box">
+	<div class="baslik"><span class="no">2</span><a href="https://aku.edu.tr/hakkimizda/universitemizgenel-bilgiler/tarihce/" target="_blank">Üniversitemizin Tarihçesi</a></div>
+	<iframe class="cerceve" src="https://aku.edu.tr/hakkimizda/universitemizgenel-bilgiler/tarihce/"></iframe>
+</div>
 
-            <div class="componentContainer " style="top: 579px; left: 282px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
-                <div class="transformContainer" style="-webkit-transform: scale(1, 1);
-                -moz-transform: scale(1, 1);
-                transform: scale(1, 1)">
-                <div style="font-size: 36px;" class="antialias">
-                <div align="center">2025 - 2026 ÖĞRETİM YILI<br>ORYANTASYON ÇALIŞMASI<br>https://sinanpasamyo.github.io</div>
-                </div>
-                </div>
-                </div>
+<div class="step box">
+	<div class="baslik"><span class="no">2</span><a href="https://ogrenci.aku.edu.tr/afyonkarahisar-tanitim-filmi/" target="_blank">Afyonkarahisar Tanıtım Filmi</a></div>
+	<div class="altbaslik">Üniversite tanıtım filmi: <a href="https://ogrenci.aku.edu.tr/2023/09/27/a-k-u-tanitim-filmi/" target="_blank">AKÜ Tanıtım Filmi</a> · MYO tanıtım videosu: <a href="https://sinanpasamyo.aku.edu.tr/wp-content/uploads/sites/14/2024/08/sinanpasamyo.mp4" target="_blank">Sinanpaşa MYO</a></div>
+	<iframe class="cerceve" style="height: 590px;" src="https://ogrenci.aku.edu.tr/afyonkarahisar-tanitim-filmi/"></iframe>
+</div>
 
+<div class="step box">
+	<div class="baslik"><span class="no">2</span><a href="https://sinanpasamyo.aku.edu.tr/" target="_blank">Sinanpaşa Meslek Yüksekokulu</a></div>
+	<div class="altbaslik">Duyurular, ders programları, sınav takvimleri ve formlar için MYO web sayfasını düzenli takip ediniz.</div>
+	<iframe class="cerceve" style="height: 590px;" src="https://sinanpasamyo.aku.edu.tr/"></iframe>
+</div>
+
+<!-- ======================= 3. PROGRAMLAR ======================= -->
+<div class="step box">
+	<div class="baslik"><span class="no">3</span>Bilgisayar Programcılığı Programı</div>
+	<p class="kucuk">Yazılım ve bilişim alanında nitelikli teknik elemanlar yetiştirmeyi amaçlar. Temel programlama, algoritma, veritabanı, internet programcılığı, web tasarımı, donanım, ağ teknolojileri ve yapay zekâ alanlarında teorik ve uygulamalı eğitim verilir.</p>
+	<div class="iki-sutun kucuk">
+		<div class="kart">
+			<h3>Unvan ve Çalışma Alanları</h3>
+			<ul>
+				<li>Unvan: <b>Bilgisayar Program Teknikeri</b></li>
+				<li>Yazılım geliştirici, programcı, teknik destek</li>
+				<li>Kamu ve özel sektör bilgi işlem birimleri, yazılım firmaları, bankalar</li>
+				<li>DGS ile lisans programlarına geçiş imkânı</li>
+			</ul>
+		</div>
+		<div class="kart">
+			<h3>Bağlantılar</h3>
+			<ul>
+				<li><a href="https://sinanpasamyo.aku.edu.tr/bilgisayar-programciligi/" target="_blank">Program tanıtım sayfası</a></li>
+				<li><a href="https://obs.aku.edu.tr/oibs/bologna/index.aspx?lang=tr&amp;curOp=showPac&amp;curUnit=37&amp;curSunit=3750" target="_blank">Ders Bilgi Paketi (müfredat, AKTS, kaynaklar)</a></li>
+				<li><a href="https://sinanpasamyo.aku.edu.tr/wp-content/uploads/sites/14/2026/08/2025_2026_SinanpasaMYO_BilgisayarProgramciligiProgramiProgramOzDegerlendirmeRaporu.pdf" target="_blank">Program Öz Değerlendirme Raporu</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="not">1. Sınıf Akademik Danışmanı: <b>Öğr. Gör. Turgay TAYMAZ</b></div>
+</div>
+
+<div class="step box">
+	<div class="baslik"><span class="no">3</span>İnternet ve Ağ Teknolojileri Programı</div>
+	<p class="kucuk">İnternet altyapıları, ağ donanımları ve bilişim teknolojileri alanında nitelikli teknik elemanlar yetiştirmeyi amaçlar. Ağ işletim sistemleri, veri iletimi, yönlendirme ve anahtarlama, sunucu donanımları, ağ güvenliği ve sistem yönetimi konularında teorik ve uygulamalı eğitim verilir.</p>
+	<div class="iki-sutun kucuk">
+		<div class="kart">
+			<h3>Unvan ve Çalışma Alanları</h3>
+			<ul>
+				<li>Sistem / ağ uzmanı, sistem destek uzmanı, ağ yöneticisi</li>
+				<li>Kamu kurumları, bankalar, üniversiteler, hastaneler, bilişim firmaları</li>
+				<li>DGS ile lisans programlarına geçiş imkânı</li>
+			</ul>
+		</div>
+		<div class="kart">
+			<h3>Bağlantılar</h3>
+			<ul>
+				<li><a href="https://sinanpasamyo.aku.edu.tr/internet-ve-ag-teknolojileri-programi/" target="_blank">Program tanıtım sayfası</a></li>
+				<li><a href="https://obs.aku.edu.tr/oibs/bologna/index.aspx?lang=tr&amp;curOp=showPac&amp;curUnit=37&amp;curSunit=422334" target="_blank">Ders Bilgi Paketi (müfredat, AKTS, kaynaklar)</a></li>
+				<li><a href="https://sinanpasamyo.aku.edu.tr/wp-content/uploads/sites/14/2026/08/2025_2026_SinanpasaMYO_InternetVeAgTeknolojileriProgramiProgramOzDegerlendirmeRaporu.pdf" target="_blank">Program Öz Değerlendirme Raporu</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="not">1. Sınıf Akademik Danışmanı: <b>Öğr. Gör. Kadir ÇIRAY</b></div>
+</div>
+
+<div class="step box">
+	<div class="baslik"><span class="no">3</span>Uygulamalı Dersler, Staj ve İşletmede Mesleki Eğitim</div>
+	<ul class="kucuk">
+		<li>Derslerimizin önemli bir kısmı <b>laboratuvar ortamında uygulamalı</b> olarak işlenir; uygulamalı derslerde devam şartı <b>%80</b>'dir.</li>
+		<li>Müfredatta yer alan <b>staj / işletmede mesleki eğitim</b> mezuniyet için zorunludur. Staj dönemi, süresi ve başvuru adımları MYO web sayfasından duyurulur.</li>
+		<li>Staj evrakları ve formlar: <a href="https://sinanpasamyo.aku.edu.tr/staj-evraklari/" target="_blank">sinanpasamyo.aku.edu.tr/staj-evraklari</a></li>
+		<li>Staj defterinizi <b>Afyon Kocatepe Üniversitesi Eğitim Sağlık ve Bilimsel Araştırma Vakfı İktisadi İşletmesi</b>'nden ya da okulumuz öğrenci işlerinden temin edebilirsiniz (<a href="https://goo.gl/maps/cx7uszqAz7xGz6qeA" target="_blank">adres</a>).</li>
+	</ul>
+	<iframe class="cerceve kisa" style="height: 300px;" src="https://sinanpasamyo.aku.edu.tr/staj-evraklari/"></iframe>
+</div>
+
+<!-- ======================= 4. BİR DÖNEM ======================= -->
+<div class="step box">
+	<div class="baslik"><span class="no">4</span>Ders Kaydından Yarıyıl Sonu Sınavlarına Bir Dönem</div>
+	<div class="akis">
+		<span>Kayıt yenileme &amp; katkı payı</span><b>→</b>
+		<span>OBS'den ders seçimi</span><b>→</b>
+		<span>Danışman onayı</span><b>→</b>
+		<span>Derslerin başlaması</span><b>→</b>
+		<span>Ara sınav</span><b>→</b>
+		<span>Mazeret sınavı</span><b>→</b>
+		<span>Yarıyıl sonu (final) sınavı</span><b>→</b>
+		<span>Bütünleme sınavı</span><b>→</b>
+		<span>Notların OBS'de ilanı</span>
+	</div>
+	<ul class="kucuk" style="margin-top: 18px;">
+		<li>Ders seçimini akademik takvimde belirtilen tarihlerde <b>OBS</b> üzerinden yapın; seçiminiz <b>danışman onayı</b> ile kesinleşir.</li>
+		<li>Sınav sonuçları, sınavdan sonra en geç <b>7 iş günü</b> içinde OBS'de ilan edilir. Maddi hata itirazı için <a href="https://sinanpasamyo.aku.edu.tr/wp-content/uploads/sites/14/2023/05/Maddi-hata-dilekcesi.docx" target="_blank">dilekçe</a> verilebilir.</li>
+		<li>Mezuniyet aşamasında tek dersi kalan öğrenciler için <b>tek ders sınavı</b> yapılır.</li>
+		<li>Tüm tarihler: <a href="https://ogrenci.aku.edu.tr/2026-2027/" target="_blank">2026-2027 Akademik Takvimi</a></li>
+	</ul>
+</div>
+
+<div class="step box">
+	<div class="baslik"><span class="no">4</span><a href="https://ogrenci.aku.edu.tr/2026-2027/" target="_blank">2026 – 2027 Akademik Takvim</a></div>
+	<iframe class="cerceve" src="https://ogrenci.aku.edu.tr/2026-2027/"></iframe>
+</div>
+
+<div class="step box">
+	<div class="baslik"><span class="no">4</span><a href="https://sinanpasamyo.aku.edu.tr/2026/09/10/2026-2027-guz-donemi-ders-programi/" target="_blank">2026 – 2027 Güz Dönemi Ders Programı</a></div>
+	<iframe class="cerceve" src="https://sinanpasamyo.aku.edu.tr/2026/09/10/2026-2027-guz-donemi-ders-programi/"></iframe>
+</div>
+
+<!-- ======================= 5. YÖNETMELİK ======================= -->
+<div class="step box">
+	<div class="baslik"><span class="no">5</span>Eğitim-Öğretim ve Sınav Yönetmeliği – Önemli Kurallar</div>
+	<div class="iki-sutun kucuk">
+		<div>
+			<div class="kart">
+				<h3>Devam Zorunluluğu</h3>
+				<ul>
+					<li>Teorik derslere en az <b class="vurgu">%70</b>, uygulamalara en az <b class="vurgu">%80</b> devam zorunludur.</li>
+					<li>Devam şartını sağlamayan öğrenci <b>DZ</b> notu alır, yarıyıl sonu sınavına giremez.</li>
+				</ul>
+			</div>
+			<div class="kart" style="margin-top: 12px;">
+				<h3>Kayıt Dondurma</h3>
+				<ul>
+					<li>Haklı ve belgelenmiş mazeretle, Yönetim Kurulu kararıyla <b>en fazla iki yarıyıl</b>.</li>
+				</ul>
+			</div>
+		</div>
+		<div>
+			<div class="kart">
+				<h3>Sınavlar</h3>
+				<ul>
+					<li>Her ders için en az bir <b>ara sınav</b> ve <b>yarıyıl sonu sınavı</b> yapılır.</li>
+					<li>DC, DD, FD, FF veya YZ alanlar <b>bütünleme sınavına</b> girebilir.</li>
+					<li><b>Mazeret sınavı</b> yalnızca ara sınavlar için; mazeret, sınavdan itibaren <b>10 gün</b> içinde belgelenmelidir.</li>
+					<li>Girilmeyen sınav <b>0 (sıfır)</b> kabul edilir.</li>
+					<li><span class="vurgu">Kopya</span> çeken / girişimde bulunan öğrenci 0 alır ve hakkında disiplin soruşturması açılır.</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="not">Yönetmelik metni: <a href="https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=15244&amp;MevzuatTur=8&amp;MevzuatTertip=5" target="_blank">AKÜ Önlisans ve Lisans Eğitim-Öğretim ve Sınav Yönetmeliği</a></div>
+</div>
+
+<div class="step box">
+	<div class="baslik"><span class="no">5</span>Ders Geçme ve Başarı Sistemi</div>
+	<div class="iki-sutun">
+		<div style="flex: 1.1;">
+			<table class="notlar">
+				<tr><th>Başarı Derecesi</th><th>Harf</th><th>Katsayı</th><th>Puan</th></tr>
+				<tr><td>Mükemmel</td><td>AA</td><td>4.0</td><td>90 – 100</td></tr>
+				<tr><td>Pekiyi</td><td>BA</td><td>3.5</td><td>85 – 89</td></tr>
+				<tr><td>İyi</td><td>BB</td><td>3.0</td><td>75 – 84</td></tr>
+				<tr><td>Orta</td><td>CB</td><td>2.5</td><td>70 – 74</td></tr>
+				<tr><td>Geçer</td><td>CC</td><td>2.0</td><td>60 – 69</td></tr>
+				<tr class="sartli"><td>Şartlı Geçer</td><td>DC</td><td>1.5</td><td>50 – 59</td></tr>
+				<tr class="basarisiz"><td>Başarısız</td><td>DD</td><td>1.0</td><td>40 – 49</td></tr>
+				<tr class="basarisiz"><td>Başarısız</td><td>FD</td><td>0.5</td><td>30 – 39</td></tr>
+				<tr class="basarisiz"><td>Başarısız</td><td>FF</td><td>0.0</td><td>0 – 29</td></tr>
+			</table>
+		</div>
+		<div class="kucuk">
+			<ul>
+				<li>Tüm sınavlar <b>100 puan</b> üzerinden değerlendirilir.</li>
+				<li>Ders başarı puanı; ara sınav ve yarıyıl sonu sınavının <b>katkı oranlarına</b> göre hesaplanır (oranlar ders bilgi paketinde yer alır).</li>
+				<li>Harf notu, <b>bağıl veya mutlak</b> değerlendirme ile belirlenir.</li>
+				<li><b>YT/YZ</b>: Not ortalamasına katılmayan dersler ve staj için yeterli/yetersiz.</li>
+				<li><b>DZ</b>: Devamsız – FF ile eşdeğerdir.</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div class="step box">
+	<div class="baslik"><span class="no">5</span><a href="https://ogrenci.aku.edu.tr/wp-content/uploads/sites/97/2026/09/kilavuz-26-27-1.pdf" target="_blank">2026 – 2027 Öğretim Yılı Öğrenci Kılavuzu</a></div>
+	<iframe class="cerceve" src="https://ogrenci.aku.edu.tr/wp-content/uploads/sites/97/2026/09/kilavuz-26-27-1.pdf"></iframe>
+</div>
+
+<!-- ======================= 6. DİĞER YÖNETMELİKLER ======================= -->
+<div class="step box">
+	<div class="baslik"><span class="no">6</span><a href="https://ogrenci.aku.edu.tr/yonetmelikler-yonergeler/" target="_blank">Öğrencilerle İlgili Diğer Yönetmelik ve Yönergeler</a></div>
+	<div class="altbaslik">
+		<a href="https://ogrenci.aku.edu.tr/diger/" target="_blank">Yönergeler ve Diğer</a> ·
+		<a href="https://ogrenci.aku.edu.tr/ozel-ogrenci/" target="_blank">Özel Öğrenci</a> ·
+		<a href="https://ogrenci.aku.edu.tr/yaz-okulu/" target="_blank">Yaz Okulu</a> ·
+		<a href="https://ogrenci.aku.edu.tr/engelsiz-aku/" target="_blank">Engelsiz AKÜ</a> ·
+		<a href="https://ogrenci.aku.edu.tr/2026-2027-egitim-ogretim-yili-harc-ucretleri/" target="_blank">Harç Ücretleri</a>
+	</div>
+	<iframe class="cerceve" style="height: 590px;" src="https://ogrenci.aku.edu.tr/yonetmelikler-yonergeler/"></iframe>
+</div>
+
+<!-- ======================= 7. DİSİPLİN ======================= -->
+<div class="step box">
+	<div class="baslik"><span class="no">7</span>Öğrenci Disiplin Süreçleri</div>
+	<p class="kucuk">Öğrenci disiplin işlemleri <b>2547 sayılı Yükseköğretim Kanunu'nun 54. maddesi</b> ve <a href="https://www.mevzuat.gov.tr/Metin.Aspx?MevzuatKod=7.5.16532&amp;MevzuatIliski=0" target="_blank">Yükseköğretim Kurumları Öğrenci Disiplin Yönetmeliği</a> hükümlerine göre yürütülür.</p>
+	<div class="iki-sutun kucuk">
+		<div class="kart">
+			<h3>Disiplin Cezaları</h3>
+			<ol>
+				<li>Uyarma</li>
+				<li>Kınama</li>
+				<li>Bir haftadan bir aya kadar uzaklaştırma</li>
+				<li>Bir veya iki yarıyıl uzaklaştırma</li>
+				<li>Yükseköğretim kurumundan çıkarma</li>
+			</ol>
+		</div>
+		<div class="kart">
+			<h3>Süreç</h3>
+			<ul>
+				<li>Disiplin soruşturması açılır, öğrencinin <b>savunması</b> alınır.</li>
+				<li>Ceza, yetkili disiplin amiri / kurulu tarafından verilir.</li>
+				<li>Cezalara karşı <b>itiraz ve yargı yolu</b> açıktır.</li>
+				<li>Sınavda kopya, sınav düzenini bozma, kurallara aykırı davranışlar disiplin suçudur.</li>
+			</ul>
+		</div>
+	</div>
+	<div class="not">Ayrıntılı bilgi: <a href="https://ogrenci.aku.edu.tr/ogrenci-disiplin-islemleri/" target="_blank">ogrenci.aku.edu.tr/ogrenci-disiplin-islemleri</a></div>
+</div>
+
+<!-- ======================= 8. DANIŞMANLIK ======================= -->
+<div class="step box">
+	<div class="baslik"><span class="no">8</span>Akademik Danışmanlık Hizmetleri</div>
+	<p class="kucuk">Akademik danışman; öğrencinin eğitim-öğretim ve diğer sorunlarıyla ilgilenmek üzere görevlendirilen öğretim elemanıdır.</p>
+	<div class="iki-sutun kucuk">
+		<div class="kart">
+			<h3>Danışmanınız Size Ne Konuda Yardımcı Olur?</h3>
+			<ul>
+				<li>Ders seçimi ve kayıt onayı</li>
+				<li>Akademik başarı takibi, devam durumu</li>
+				<li>Kayıt dondurma, muafiyet, intibak, geçiş işlemleri</li>
+				<li>Staj, kariyer ve DGS yönlendirmesi</li>
+				<li>İhtiyaç halinde rehberlik birimlerine yönlendirme</li>
+			</ul>
+		</div>
+		<div>
+			<div class="kart">
+				<h3>Bilgisayar Programcılığı</h3>
+				<div>Öğr. Gör. <b>Turgay TAYMAZ</b></div>
+			</div>
+			<div class="kart" style="margin-top: 12px;">
+				<h3>İnternet ve Ağ Teknolojileri</h3>
+				<div>Öğr. Gör. <b>Kadir ÇIRAY</b></div>
+			</div>
+		</div>
+	</div>
+	<div class="not">Danışmanlarınızla görüşme saatleri ve iletişim bilgileri ilan edilecektir. Sorunlarınızı biriktirmeden, zamanında paylaşın.</div>
+</div>
+
+<!-- ======================= 9. GEÇİŞLER ======================= -->
+<div class="step box">
+	<div class="baslik"><span class="no">9</span>Çift Anadal / Yandal / Yatay ve Dikey Geçiş</div>
+	<ul class="kucuk">
+		<li><b>Çift Anadal / Yandal:</b> Başarılı öğrenciler, ilan edilen programlarda ikinci bir diploma ya da yandal sertifikası alabilir. <a href="https://ogrenci.aku.edu.tr/cift-anadal-yandal/" target="_blank">Ayrıntılar</a></li>
+		<li><b>Yatay Geçiş:</b> Kurum içi / kurumlar arası geçişler, genel not ortalaması ve YKS puanı dikkate alınarak ayrılan kontenjanlara göre yapılır. <a href="https://ogrenci.aku.edu.tr/yatay-gecis-2/" target="_blank">Yatay Geçiş Yönergesi</a></li>
+		<li><b>Dikey Geçiş (DGS):</b> Mezunlarımız ÖSYM'nin Dikey Geçiş Sınavı ile ilgili lisans programlarına geçiş yapabilir.</li>
+	</ul>
+	<iframe class="cerceve kisa" style="height: 380px;" src="https://ogrenci.aku.edu.tr/gecisler/"></iframe>
+</div>
+
+<!-- ======================= 10. MUAFİYET ======================= -->
+<div class="step box">
+	<div class="baslik"><span class="no">10</span>Muafiyet Sınavları ve Ders Muafiyeti</div>
+	<ul class="kucuk">
+		<li><b>Yabancı Dil Muafiyet Sınavı:</b> Yeni kayıt yaptıran öğrencilere yönelik sınav yapılmıştır. <a href="https://sinanpasamyo.aku.edu.tr/2026/09/26/yeni-kayit-yaptiran-ogrencilerimize-yonelik-yabanci-dil-dersleri-muafiyet-sinavi-duyurusu/" target="_blank">Duyuru</a> · <a href="https://sinanpasamyo.aku.edu.tr/2026/10/01/2026-2027-egitim-ogretim-yili-yabanci-dil-muafiyet-sinavi-sonuclari/" target="_blank">Sonuçlar</a></li>
+		<li>Muafiyet sınavında <b>en az 60 puan</b> alan öğrenci ilgili dersten muaf tutulur; aldığı puanın harf karşılığı başarı notu olarak işlenir.</li>
+		<li><b>Önceki öğrenimin tanınması (intibak):</b> Daha önce bir yükseköğretim kurumunda başarılı olduğunuz dersler için, akademik takvimde belirtilen süre içinde muafiyet başvurusu yapabilirsiniz. Başvurular Yönetim Kurulu kararıyla sonuçlanır.</li>
+	</ul>
+	<iframe class="cerceve kisa" style="height: 330px;" src="https://sinanpasamyo.aku.edu.tr/2026/10/01/2026-2027-egitim-ogretim-yili-yabanci-dil-muafiyet-sinavi-sonuclari/"></iframe>
+</div>
+
+<!-- ======================= 11. OBS ======================= -->
+<div class="step box merkez">
+	<div class="baslik" style="text-align: left;"><span class="no">11</span>Öğrenci Bilgi Sistemi ve Mobil Uygulamalar</div>
+	<div class="iki-sutun" style="margin-top: 30px;">
+		<div class="kart">
+			<h3><a href="https://obs.aku.edu.tr/" target="_blank">Öğrenci Bilgi Sistemi (OBS)</a></h3>
+			<p class="kucuk">Ders kaydı, notlar, transkript, devamsızlık, harç ve belge işlemleri</p>
+			<p><a href="https://apps.apple.com/tr/app/proliz-mobil/id1377651655?l=tr" target="_blank">App Store – Proliz Mobil</a></p>
+			<p><a href="https://play.google.com/store/apps/details?id=com.prolizyazilim.mobil&amp;hl=tr&amp;gl=US" target="_blank">Google Play – Proliz Mobil</a></p>
+		</div>
+		<div class="kart">
+			<h3><a href="https://uemyo.aku.edu.tr/" target="_blank">Uzaktan Eğitim Sistemi</a></h3>
+			<p class="kucuk">Uzaktan eğitimle verilen derslerin canlı yayınları, kayıtları ve sınavları</p>
+			<p><a href="https://apps.apple.com/tr/app/k365/id1606171662?l=tr" target="_blank">App Store – K365</a></p>
+			<p><a href="https://play.google.com/store/apps/details?id=com.advancity.alms&amp;gl=TR&amp;pli=1" target="_blank">Google Play – ALMS</a></p>
+		</div>
+	</div>
+	<div class="kart" style="margin-top: 20px;">
+		<h3>Afyon Kocatepe Üniversitesi Mobil Uygulaması</h3>
+		<a href="https://apps.apple.com/tr/app/afyon-kocatepe/id6738998521?l=tr" target="_blank">App Store – Afyon Kocatepe</a>
+	</div>
+</div>
+
+<!-- ======================= 12. UZAKTAN EĞİTİM ======================= -->
+<div class="step box">
+	<div class="baslik"><span class="no">12</span>Uzaktan Öğretim Sistemi, Derslerin İşlenişi ve Sınavları</div>
+	<ul class="kucuk">
+		<li>Senato tarafından belirlenen bazı dersler <b>uzaktan eğitim</b> yoluyla verilir; bu derslerde devam zorunluluğu aranmaz.</li>
+		<li>Dersler canlı (senkron) yapılır, kayıtları sonradan izlenebilir. Sınav türü ve tarihleri sistemden duyurulur.</li>
+		<li>Uzaktan Eğitim MYO'daki sınavlar için <b>mazeret sınavı açılmaz</b> – sınav tarihlerini kaçırmayın!</li>
+		<li><a href="https://ogrenci.aku.edu.tr/uzaktan-egitim/" target="_blank">Uzaktan eğitim dersleri</a> · <a href="https://uemyo.aku.edu.tr/sistem-kilavuzlari/" target="_blank">Sistem kullanım kılavuzları</a> · <a href="https://aku.edu.tr/uzaktan-egitim-sistemi/" target="_blank">Uzaktan Öğrenim Sistemi</a></li>
+	</ul>
+	<iframe class="cerceve kisa" style="height: 360px;" src="https://uemyo.aku.edu.tr/sistem-kilavuzlari/"></iframe>
+</div>
+
+<!-- ======================= 13. KAYNAKLAR / KÜTÜPHANE ======================= -->
+<div class="step box">
+	<div class="baslik"><span class="no">13</span>Kaynak Kitaplar ve Kütüphane</div>
+	<ul class="kucuk">
+		<li>Her dersin <b>temel ve yardımcı kaynakları</b> ders bilgi paketinde yer alır; ders sorumlusu öğretim elemanı ilk hafta paylaşır.</li>
+		<li>Kaynaklara <a href="https://kutuphane.aku.edu.tr/" target="_blank">Kütüphane ve Dokümantasyon Daire Başkanlığı</a> üzerinden basılı ve elektronik olarak ulaşabilirsiniz.</li>
+		<li>Kampüs dışından e-kitap ve veritabanlarına <a href="https://kutuphane.aku.edu.tr/uzaktan-erisim/" target="_blank">uzaktan erişim</a> sağlayabilirsiniz.</li>
+	</ul>
+	<iframe class="cerceve kisa" style="height: 420px;" src="https://kutuphane.aku.edu.tr/"></iframe>
+</div>
+
+<div class="step box">
+	<div class="baslik"><span class="no">13</span><a href="https://kutuphane.aku.edu.tr/uzaktan-erisim/" target="_blank">Kütüphane Uzaktan Erişim</a></div>
+	<iframe class="cerceve" src="https://kutuphane.aku.edu.tr/uzaktan-erisim/"></iframe>
+</div>
+
+<!-- ======================= 14. İNTERNET / E-POSTA ======================= -->
+<div class="step box">
+	<div class="baslik"><span class="no">14</span>Kampüslerde İnternet Erişimi</div>
+	<div class="altbaslik">Kampüs alanlarında ve eğitim binalarında internetten yararlanmak için: <a href="https://bim.aku.edu.tr/internet-baglantisi/" target="_blank">bim.aku.edu.tr/internet-baglantisi</a></div>
+	<iframe class="cerceve" style="height: 600px;" src="https://bim.aku.edu.tr/internet-baglantisi/"></iframe>
+</div>
+
+<div class="step box">
+	<div class="baslik"><span class="no">14</span>Öğrenci E-posta Adresi</div>
+	<div class="altbaslik">Öğrenci e-posta adresi almak için: <a href="https://bim.aku.edu.tr/wp-content/uploads/sites/2/2025/09/eposta-kayit.mp4" target="_blank">kayıt videosu</a> · Giriş: <a href="https://posta.aku.edu.tr/" target="_blank">posta.aku.edu.tr</a></div>
+	<video class="cerceve" style="height: 600px;" src="https://bim.aku.edu.tr/wp-content/uploads/sites/2/2025/09/eposta-kayit.mp4" controls preload="none"></video>
+</div>
+
+<!-- ======================= 15. İSG ======================= -->
+<div class="step box">
+	<div class="baslik"><span class="no">15</span>İş Sağlığı ve Güvenliği – Acil Durumlar</div>
+	<div class="iki-sutun kucuk">
+		<div class="kart">
+			<h3>Laboratuvar Kuralları</h3>
+			<ul>
+				<li>Laboratuvara yiyecek ve içecek ile girmeyin.</li>
+				<li>Elektrik kablolarına, prizlere ve kasaların içine müdahale etmeyin.</li>
+				<li>Arızalı cihazları öğretim elemanına bildirin.</li>
+				<li>Koridorları ve kapı önlerini çanta vb. ile kapatmayın.</li>
+				<li>Uzun süre ekran karşısında doğru oturuş ve mola alışkanlığı edinin.</li>
+			</ul>
+		</div>
+		<div class="kart">
+			<h3>Acil Durumlarda</h3>
+			<ul>
+				<li>Acil çağrı: <b class="vurgu">112</b></li>
+				<li><b>Yangında:</b> Sakin olun, alarmı bildirin, asansör kullanmayın, acil çıkış levhalarını izleyin.</li>
+				<li><b>Depremde:</b> Çök – Kapan – Tutun; sarsıntı bitince binayı terk edin.</li>
+				<li>Binayı terk ettikten sonra <b>toplanma alanına</b> gidin ve yoklamaya katılın.</li>
+				<li>Yangın tüpü ve acil çıkışların yerini öğrenin.</li>
+			</ul>
+		</div>
+	</div>
+	<div class="not">Ayrıntılı bilgi: <a href="https://isg.aku.edu.tr/" target="_blank">İş Sağlığı ve Güvenliği Koordinatörlüğü</a></div>
+</div>
+
+<!-- ======================= 16. KULÜPLER ======================= -->
+<div class="step box">
+	<div class="baslik"><span class="no">16</span><a href="https://topluluklar.aku.edu.tr/" target="_blank">Öğrenci Kulüp ve Toplulukları</a></div>
+	<div class="altbaslik">Bilim, teknoloji, sanat, spor ve sosyal sorumluluk alanlarındaki topluluklara katılabilir, etkinliklerde görev alabilirsiniz. <a href="https://aku.edu.tr/ogrenci-kulup-ve-topluluklari" target="_blank">Ayrıntılar</a></div>
+	<iframe class="cerceve" style="height: 590px;" src="https://topluluklar.aku.edu.tr/"></iframe>
+</div>
+
+<!-- ======================= 17. KALİTE / AKREDİTASYON ======================= -->
+<div class="step box">
+	<div class="baslik"><span class="no">17</span>Akreditasyon ve Kalite Süreçleri</div>
+	<ul class="kucuk">
+		<li>Üniversitemiz, <b>kurum</b> ve <b>program</b> düzeyinde kalite güvencesi ve akreditasyon süreçlerini yürütmektedir.</li>
+		<li>Programlarımız her yıl <b>öz değerlendirme</b> raporu hazırlar ve akran değerlendirmesinden geçer: <a href="https://sinanpasamyo.aku.edu.tr/wp-content/uploads/sites/14/2026/08/2025_2026_SinanpasaMYO_BilgisayarProgramciligiProgramiProgramOzDegerlendirmeRaporu.pdf" target="_blank">Bilgisayar Programcılığı</a> · <a href="https://sinanpasamyo.aku.edu.tr/wp-content/uploads/sites/14/2026/08/2025_2026_SinanpasaMYO_InternetVeAgTeknolojileriProgramiProgramOzDegerlendirmeRaporu.pdf" target="_blank">İnternet ve Ağ Teknolojileri</a></li>
+		<li><b>Öğrenci geri bildirimleri</b> (ders değerlendirme anketleri, memnuniyet anketleri) iyileştirme çalışmalarının temelidir; anketlere içtenlikle katılın.</li>
+		<li><b>Kalite Elçileri Topluluğu</b>'na katılarak kalite süreçlerinde aktif rol alabilirsiniz.</li>
+		<li><a href="https://ozdegerlendirme.aku.edu.tr/" target="_blank">Program Değerlendirme Sistemi</a> · <a href="https://kalite.aku.edu.tr/kalite-koordinatorlugu/" target="_blank">Kalite Koordinatörlüğü</a></li>
+	</ul>
+	<iframe class="cerceve kisa" style="height: 270px;" src="https://kalite.aku.edu.tr/"></iframe>
+</div>
+
+<!-- ======================= 18. TEKNOFEST ======================= -->
+<div class="step box">
+	<div class="baslik"><span class="no">18</span>TEKNOFEST Çalışmaları</div>
+	<p class="kucuk"><a href="https://www.teknofest.org/" target="_blank">TEKNOFEST</a> Havacılık, Uzay ve Teknoloji Festivali kapsamında düzenlenen teknoloji yarışmaları, bilişim öğrencileri için büyük bir fırsattır.</p>
+	<div class="iki-sutun kucuk">
+		<div class="kart">
+			<h3>Bölümümüze Uygun Yarışma Alanları</h3>
+			<ul>
+				<li>Yapay zekâ ve doğal dil işleme</li>
+				<li>Siber güvenlik</li>
+				<li>Akıllı ulaşım, sağlıkta yapay zekâ</li>
+				<li>Robotik ve otonom sistemler</li>
+				<li>Eğitim teknolojileri, mobil / web uygulamaları</li>
+			</ul>
+		</div>
+		<div class="kart">
+			<h3>Nasıl Katılırım?</h3>
+			<ul>
+				<li>Başvurular genellikle yılın ilk aylarında <b>teknofest.org</b> üzerinden yapılır.</li>
+				<li>Takım kurmak ve danışman öğretim elemanı bulmak için akademik danışmanınızla görüşün.</li>
+				<li>Üniversitemizin TEKNOFEST topluluğu tanıtım etkinliklerini takip edin.</li>
+				<li>MYO laboratuvarlarımız proje çalışmaları için kullanılabilir.</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<!-- ======================= 19. SOSYAL YAŞAM ======================= -->
+<div class="step box">
+	<div class="baslik"><span class="no">19</span>Sosyal Yaşam Alanları</div>
+	<div class="iki-sutun kucuk">
+		<div class="kart">
+			<h3>Yemek, Kantin, Kafe</h3>
+			<ul>
+				<li><a href="https://skultur.aku.edu.tr/2022/09/15/yemek-listesi/" target="_blank">Yemekhane yemek listesi</a></li>
+				<li><a href="https://skultur.aku.edu.tr/yemek-ve-kantin-fiyat-listesi/" target="_blank">Yemek ve kantin fiyat listesi</a></li>
+				<li><a href="https://sosyaltesis.aku.edu.tr/" target="_blank">Sosyal tesisler</a></li>
+			</ul>
+		</div>
+		<div class="kart">
+			<h3>Spor</h3>
+			<ul>
+				<li><a href="https://skultur.aku.edu.tr/sportif-hizmetler/" target="_blank">Sportif hizmetler</a></li>
+				<li><a href="https://aku.edu.tr/spor-olanaklari" target="_blank">Spor olanakları</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="kart kucuk" style="margin-top: 14px;">
+		<h3>Sinanpaşa'da</h3>
+		<ul>
+			<li><a href="https://sinanpasamyo.aku.edu.tr/2026/09/03/sinanpasa-belediyesi-sosyal-tesislerinde-personelimize-ve-ogrencilerimize-indirim-imkani/" target="_blank">Sinanpaşa Belediyesi sosyal tesislerinde öğrencilerimize indirim imkânı</a></li>
+			<li>Barınma: <a href="https://ogrenci.aku.edu.tr/yurt-imkanlari-2/" target="_blank">Yurt imkânları</a> · Ulaşım: <a href="https://ogrenci.aku.edu.tr/ulasim-bilgileri/" target="_blank">Ulaşım bilgileri</a></li>
+			<li><a href="https://skultur.aku.edu.tr/" target="_blank">Sağlık Kültür ve Spor Daire Başkanlığı</a> – burs, kısmi zamanlı çalışma ve etkinlik duyuruları</li>
+		</ul>
+	</div>
+</div>
+
+<div class="step box">
+	<div class="baslik"><span class="no">19</span><a href="https://aku.edu.tr/hakkimizda/universitemizgenel-bilgiler/kultur-merkezlerimiz/" target="_blank">Atatürk Kongre Merkezi ve Kültür Merkezlerimiz</a></div>
+	<iframe class="cerceve" src="https://aku.edu.tr/hakkimizda/universitemizgenel-bilgiler/kultur-merkezlerimiz/"></iframe>
+</div>
+
+<!-- ======================= 20. BAĞIMLILIK ======================= -->
+<div class="step box">
+	<div class="baslik"><span class="no">20</span>Bağımlılıkla Mücadele</div>
+	<div class="iki-sutun kucuk">
+		<div class="kart">
+			<h3>Bağımlılık Türleri</h3>
+			<ul>
+				<li>Madde bağımlılığı (sigara, alkol, uyuşturucu)</li>
+				<li><b>Teknoloji bağımlılığı</b> (internet, oyun, sosyal medya)</li>
+				<li>Kumar ve <b>yasa dışı bahis</b> bağımlılığı</li>
+			</ul>
+			<p>Bilişim öğrencileri olarak ekran süremizi bilinçli yönetmek, uyku ve sosyal yaşam dengesini korumak özellikle önemlidir.</p>
+		</div>
+		<div class="kart">
+			<h3>Destek Hatları</h3>
+			<ul>
+				<li><b>YEDAM (Yeşilay Danışmanlık Merkezi): 115</b></li>
+				<li><b>ALO 171</b> Sigara Bırakma Danışma Hattı</li>
+				<li><a href="https://www.yesilay.org.tr/" target="_blank">yesilay.org.tr</a></li>
+				<li>Üniversitemiz <a href="https://skultur.aku.edu.tr/psikolojik-danismanlik-ve-rehberlik/" target="_blank">Psikolojik Danışmanlık ve Rehberlik</a> birimi</li>
+			</ul>
+		</div>
+	</div>
+	<div class="not">Yardım istemek bir zayıflık değil, güçlü olmanın göstergesidir. Kendiniz ya da bir arkadaşınız için çekinmeden destek isteyin.</div>
+</div>
+
+<!-- ======================= 21. SİBER GÜVENLİK ======================= -->
+<div class="step box">
+	<div class="baslik"><span class="no">21</span>Siber Güvenlik</div>
+	<div class="iki-sutun kucuk">
+		<div class="kart">
+			<h3>Temel Kurallar</h3>
+			<ul>
+				<li>Güçlü ve her hesap için <b>farklı parola</b> kullanın; <b>iki adımlı doğrulamayı</b> açın.</li>
+				<li>OBS, e-posta ve banka şifrelerinizi kimseyle paylaşmayın.</li>
+				<li><b>Oltalama (phishing)</b> e-postalarına ve SMS'lerdeki bağlantılara dikkat edin.</li>
+				<li>Yazılımlarınızı ve işletim sisteminizi güncel tutun.</li>
+				<li>Açık / şifresiz Wi-Fi ağlarında kişisel işlem yapmayın.</li>
+			</ul>
+		</div>
+		<div class="kart">
+			<h3>Hukuki Sorumluluk</h3>
+			<ul>
+				<li>Yetkisiz sistem erişimi, veri ele geçirme ve hesap paylaşımı <b>bilişim suçudur</b> (TCK 243-245).</li>
+				<li>Kişisel verilerin korunması (KVKK) herkesin sorumluluğudur.</li>
+				<li>Öğrendiğiniz bilgileri yalnızca <b>etik ve yasal</b> amaçlarla kullanın.</li>
+				<li>Siber olayları <a href="https://www.usom.gov.tr/" target="_blank">USOM</a>'a bildirebilirsiniz.</li>
+			</ul>
+		</div>
+	</div>
+	<div class="not">Daha fazla bilgi: <a href="https://www.siberguvenlik.gov.tr/" target="_blank">Siber Güvenlik Başkanlığı</a> · <a href="https://www.usom.gov.tr/" target="_blank">usom.gov.tr</a></div>
+</div>
+
+<!-- ======================= 22. REHBERLİK ======================= -->
+<div class="step box">
+	<div class="baslik"><span class="no">22</span>Rehberlik Hizmetleri (Psikolog, Diyetisyen)</div>
+	<div class="altbaslik">
+		<a href="https://skultur.aku.edu.tr/psikolojik-danismanlik-ve-rehberlik/" target="_blank">Psikolojik Danışmanlık ve Rehberlik Hizmeti</a> ·
+		<a href="https://skultur.aku.edu.tr/beslenme-ve-diyet-danismanlik-hizmeti/" target="_blank">Beslenme ve Diyet Danışmanlık Hizmeti</a> ·
+		<a href="https://aku.edu.tr/beslenme-saglik" target="_blank">Beslenme ve Sağlık</a>
+	</div>
+	<iframe class="cerceve" style="height: 590px;" src="https://skultur.aku.edu.tr/psikolojik-danismanlik-ve-rehberlik/"></iframe>
+</div>
+
+<!-- ======================= 23. KARİYER ======================= -->
+<div class="step box">
+	<div class="baslik"><span class="no">23</span>Kariyer Geliştirme – Kariyer Kapısı ve Yetenek Kapısı</div>
+	<ul class="kucuk">
+		<li><a href="https://gikam.aku.edu.tr/" target="_blank">Girişimcilik ve Kariyer Geliştirme Uygulama ve Araştırma Merkezi (GİKAM)</a> kariyer planlama, girişimcilik eğitimleri ve kariyer günleri düzenler.</li>
+		<li><a href="https://isilanlari.aku.edu.tr/" target="_blank">AKÜ Kariyer Ofisi</a> üzerinden iş ve staj ilanlarını takip edebilirsiniz.</li>
+		<li><b>Kariyer Kapısı</b> (Cumhurbaşkanlığı İnsan Kaynakları Ofisi): staj seferberliği, kamu ve özel sektör staj / iş ilanları, kariyer fuarları.</li>
+		<li><b>Yetenek Kapısı</b>: Öğrenci ve yeni mezunları işverenlerle buluşturan ulusal kariyer platformu.</li>
+	</ul>
+	<iframe class="cerceve kisa" style="height: 390px;" src="https://gikam.aku.edu.tr/"></iframe>
+</div>
+
+<!-- ======================= 24. DEĞİŞİM PROGRAMLARI ======================= -->
+<div class="step box">
+	<div class="baslik"><span class="no">24</span><a href="https://uim.aku.edu.tr/" target="_blank">Öğrenci Değişim Programları</a></div>
+	<div class="altbaslik">
+		<a href="https://uim.aku.edu.tr/erasmus/" target="_blank">Erasmus+</a> (yurt dışında öğrenim ve staj) ·
+		<a href="https://farabi.aku.edu.tr/" target="_blank">Farabi</a> (yurt içi üniversitelerde öğrenim) ·
+		<a href="https://uim.aku.edu.tr/mevlana/" target="_blank">Mevlâna</a> (anlaşmalı yurt dışı üniversiteler)
+	</div>
+	<iframe class="cerceve" style="height: 590px;" src="https://uim.aku.edu.tr/"></iframe>
+</div>
+
+<!-- ======================= KAPANIŞ ======================= -->
+<div class="step box merkez">
+	<div style="font-size: 90px; font-weight: 700; color: #005e9c; margin-top: 120px;">TEŞEKKÜRLER</div>
+	<div style="font-size: 30px; margin-top: 20px;">Sorularınız?</div>
+	<div style="font-size: 24px; margin-top: 40px; line-height: 1.6;">
+		Öğr. Gör. Turgay TAYMAZ – Bilgisayar Programcılığı 1. Sınıf Akademik Danışmanı<br>
+		Öğr. Gör. Kadir ÇIRAY – İnternet ve Ağ Teknolojileri 1. Sınıf Akademik Danışmanı
+	</div>
+	<div class="not" style="text-align: left; margin-top: 40px;">Uyum programına ilişkin görüş ve önerileriniz bizim için değerlidir. Lütfen geri bildirim formunu doldurunuz.</div>
+	<div style="font-size: 20px; margin-top: 20px; color: #777;">https://sinanpasamyo.github.io</div>
+</div>
 
 </div>
 
-<div class="step box" data-x="2000" data-y="0">
+<div class="impress-progressbar"><div></div></div>
+<div class="impress-progress"></div>
 
-
-    <div class="componentContainer " style="top: 35px; left: 104px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
-        <div class="transformContainer" style="-webkit-transform: scale(1, 1);
-        -moz-transform: scale(1, 1);
-        transform: scale(1, 1)">
-        <div style="font-size: 30px;" class="antialias">
-            <div align="left">1- Üniversite Tanıtımı
-		<br>2- Kütüphane ve Kongre Merkezi ile diğer sosyal alan ve imkanların tanıtımı
-                <br>3- Temel dersler ile ilgili kaynak kitapların nasıl temin edilebileceği hakkında bilgilendirme 
-		<br>4- Kampüs alanında ve eğitim binalarında internetten nasıl yararlanılacağı hakkında bilgilendirme
-                <br>5- Uzaktan eğitim derlerinin işlenişi ve sınavları hakkında bilgilendirme
-		<br>6- Afyon Kocatepe Üniversitesi Eğitim-Öğretim Sınav Yönetmeliği, Yükseköğretim Kurumları Öğrenci Disiplin Yönetmeliği ve bağlı yönerge ve yönetmelikler hakkında bilgilendirme
-                <br>7- Ders geçme ve başarı sistemi hakkında bilgilendirme
-		<br>8- Yönetmeliklerin uygulama ilkeleri ve esasları hakkında bilgilendirme
-		<br>9- Danışmanlık Hizmetleri hakkında bilgilendirme
-                <br>10- Öğrenci Değişim Programlarına ilişkin bilgilendirme ve tanıtım
-		<br>11- Öğrenci Bilgi Sistemi ve Mobil Uygulama hakkında bilgilendirme
-            </div>
-        </div>
-        </div>
-        </div>
-</div>
-
-<div class="step box" data-x="0" data-y="1000">
-    <div class="componentContainer " style="top: 128px; left: 156px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
-        <div class="transformContainer" style="-webkit-transform: scale(1, 1);
-        -moz-transform: scale(1, 1);
-        transform: scale(1, 1)">
-        <div style="display: flex; align-items: center; justify-content: center; gap: 30px;">
-            <img src="https://kutuphane.aku.edu.tr/wp-content/uploads/sites/122/2015/11/cropped-akulogo-gif.gif" style="max-height: 250px;">
-            <img src="https://sinanpasamyo.aku.edu.tr/wp-content/uploads/sites/14/2023/03/SPMYO_Logo.png" style="max-height: 250px;">
-        </div>
-        </div>
-        </div>
-</div>
-
-<div class="step box" data-x="2000" data-y="1000">
-    <div class="componentContainer " style="top: 16px; left: 185px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
-        <div class="transformContainer" style="-webkit-transform: scale(1, 1);
-        -moz-transform: scale(1, 1);
-        transform: scale(1, 1)">
-        <div style="font-size: 24px;" class="antialias">
-        <a href=" https://aku.edu.tr/rektorluk/rektorlukyonetim/organizasyon-semasi/" target="_blank">AFYON KOCATEPE ÜNİVERSİTESİ ORGANİZASYON ŞEMASI</a><br>
-        </div>
-        </div>
-        </div>    
-             <div class="componentContainer " style="top: 81px; left: 86px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: 872px; height: 697.6px;">
-            <div class="transformContainer" style="-webkit-transform: scale(0.91, 0.91);
-            -moz-transform: scale(0.91, 0.91);
-            transform: scale(0.91, 0.91)">
-            <iframe src="https://aku.edu.tr/rektorluk/rektorlukyonetim/organizasyon-semasi/" width="960" height="768"></iframe>
-            </div>
-            </div>
-
-</div>
-
-<div class="step box" data-x="4000" data-y="1000">
-    <div class="componentContainer " style="top: 22px; left: 260px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
-        <div class="transformContainer" style="-webkit-transform: scale(1, 1);
-        -moz-transform: scale(1, 1);
-        transform: scale(1, 1)">
-        <div style="font-size: 24px;" class="antialias">
-        ÜNİVERSİTEMİZ ANASAYFA ADRESİ <a href="https://aku.edu.tr" target="_blank">aku.edu.tr</a> <br>
-        </div>
-        </div>
-        </div>
-        <div class="componentContainer " style="top: 60px; left: 76px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: 872px; height: 697.6px;">
-            <div class="transformContainer" style="-webkit-transform: scale(0.91, 0.91);
-            -moz-transform: scale(0.91, 0.91);
-            transform: scale(0.91, 0.91)">
-            <iframe src="https://aku.edu.tr/" width="960" height="768"></iframe>
-            </div>
-            </div>
-</div>
-
-<div class="step box" data-x="5000" data-y="0">
-    <div class="componentContainer " style="top: 12px; left: 47px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: 931px; height: 744.8px;">
-        <div class="transformContainer" style="-webkit-transform: scale(0.97, 0.97);
-        -moz-transform: scale(0.97, 0.97);
-        transform: scale(0.97, 0.97)">
-        <iframe src="https://aku.edu.tr/hakkimizda/universitemizgenel-bilgiler/tarihce/" width="960" height="768"></iframe>
-        </div>
-        </div>
-</div>
-
-<div class="step box" data-x="6000" data-y="1000">
-    <div class="componentContainer " style="top: 21px; left: 262px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
-        <div class="transformContainer" style="-webkit-transform: scale(1, 1);
-        -moz-transform: scale(1, 1);
-        transform: scale(1, 1)">
-        <div style="font-size: 24px;" class="antialias">
-        <a href="https://kutuphane.aku.edu.tr/" target="_blank">Kütüphane ve Dökümantasyon Daire Başkanlığı</a><br>
-        </div>
-        </div>
-        </div>
-
-        <div class="componentContainer " style="top: 65px; left: 100.04px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: 820px; height: 656px;">
-            <div class="transformContainer" style="-webkit-transform: scale(0.85, 0.85);
-            -moz-transform: scale(0.85, 0.85);
-            transform: scale(0.85, 0.85)">
-            <iframe src="https://kutuphane.aku.edu.tr/" width="960" height="768"></iframe>
-            </div>
-            </div>
-</div>
-
-<div class="step box" data-x="7000" data-y="0">
-    <div class="componentContainer " style="top: 15px; left: 338px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
-        <div class="transformContainer" style="-webkit-transform: scale(1, 1);
-        -moz-transform: scale(1, 1);
-        transform: scale(1, 1)">
-        <div style="font-size: 24px;" class="antialias">
-        <a href="https://kutuphane.aku.edu.tr/uzaktan-erisim/" target="_blank">KÜTÜPHANE UZAKTAN ERİŞİM</a><br>
-        </div>
-        </div>
-        </div>
-
-        <div class="componentContainer " style="top: 47px; left: 70px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: 884px; height: 707.2px;">
-            <div class="transformContainer" style="-webkit-transform: scale(0.92, 0.92);
-            -moz-transform: scale(0.92, 0.92);
-            transform: scale(0.92, 0.92)">
-            <iframe src="https://kutuphane.aku.edu.tr/uzaktan-erisim/" width="960" height="768"></iframe>
-            </div>
-            </div>
-</div>
-
-<div class="step box" data-x="8000" data-y="1000">
-    <div class="componentContainer " style="top: 22px; left: 400px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
-        <div class="transformContainer" style="-webkit-transform: scale(1, 1);
-        -moz-transform: scale(1, 1);
-        transform: scale(1, 1)">
-        <div style="font-size: 24px;" class="antialias">
-        <a href="https://aku.edu.tr/hakkimizda/universitemizgenel-bilgiler/kultur-merkezlerimiz/" target="_blank">Kültür Merkezlerimiz</a><br>
-        </div>
-        </div>
-        </div>
-
-        <div class="componentContainer " style="top: 58px; left: 77px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: 871px; height: 696.8px;">
-            <div class="transformContainer" style="-webkit-transform: scale(0.91, 0.91);
-            -moz-transform: scale(0.91, 0.91);
-            transform: scale(0.91, 0.91)">
-            <iframe src="https://aku.edu.tr/hakkimizda/universitemizgenel-bilgiler/kultur-merkezlerimiz/" width="960" height="768"></iframe>
-            </div>
-            </div>
-</div>
-
-<div class="step box" data-x="9000" data-y="0">
-    <div class="componentContainer " style="top: 21px; left: 23px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
-        <div class="transformContainer" style="-webkit-transform: scale(1, 1);
-        -moz-transform: scale(1, 1);
-        transform: scale(1, 1)">
-        <div style="font-size: 24px;" class="antialias">
-        <div><br></div><div align="center">Staj defterinizi</div><div> <b>Afyon Kocatepe Üniversitesi Eğitim Sağlık ve Bilimsel Araştırma Vakfı İktisadi İşletmesi</b>'nden ya da okulumuz öğrenci işlerinden temin edebilirsiniz.</div><div><br></div><div>Adres için <a href="https://goo.gl/maps/cx7uszqAz7xGz6qeA" target="_blank">tıklayınız</a>.<br></div><div><br></div>
-        </div>
-        </div>
-        </div>
-
-</div>
-
-<div class="step box" data-x="10000" data-y="1000">
-    <div class="componentContainer " style="top: 19px; left: 143px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
-        <div class="transformContainer" style="-webkit-transform: scale(1, 1);
-        -moz-transform: scale(1, 1);
-        transform: scale(1, 1)">
-        <div style="font-size: 24px;" class="antialias">
-        <div>Öğrenci E-posta adresi almak için:</div><div><a href="https://bim.aku.edu.tr/wp-content/uploads/sites/2/2025/09/eposta-kayit.mp4" target="_blank">https://bim.aku.edu.tr/wp-content/uploads/sites/2/2025/09/eposta-kayit.mp4</a></div>
-        </div>
-        </div>
-        </div>
-
-        <div class="componentContainer " style="top: 90px; left: 101px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: 823px; height: 658.4px;">
-            <div class="transformContainer" style="-webkit-transform: scale(0.86, 0.86);
-            -moz-transform: scale(0.86, 0.86);
-            transform: scale(0.86, 0.86)">
-            <iframe src="https://bim.aku.edu.tr/wp-content/uploads/sites/2/2025/09/eposta-kayit.mp4" width="960" height="768"></iframe>
-            </div>
-            </div>
-
-</div>
-
-<div class="step box" data-x="11000" data-y="0">
-    <div class="componentContainer " style="top: 19px; left: 143px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
-        <div class="transformContainer" style="-webkit-transform: scale(1, 1);
-        -moz-transform: scale(1, 1);
-        transform: scale(1, 1)">
-        <div style="font-size: 24px;" class="antialias">
-        <div>Kampüs alanlarında ve eğitim binalarında internetten yararlanmak için:</div><div><a href="https://bim.aku.edu.tr/internet-baglantisi/" target="_blank">https://bim.aku.edu.tr/internet-baglantisi/</a></div>
-        </div>
-        </div>
-        </div>
-
-        <div class="componentContainer " style="top: 90px; left: 101px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: 823px; height: 658.4px;">
-            <div class="transformContainer" style="-webkit-transform: scale(0.86, 0.86);
-            -moz-transform: scale(0.86, 0.86);
-            transform: scale(0.86, 0.86)">
-            <iframe src="https://bim.aku.edu.tr/internet-baglantisi/" width="960" height="768"></iframe>
-            </div>
-            </div>
-
-</div>
-
-<div class="step box" data-x="12000" data-y="1000">
-    <div class="componentContainer " style="top: 14px; left: 182px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
-        <div class="transformContainer" style="-webkit-transform: scale(1, 1);
-        -moz-transform: scale(1, 1);
-        transform: scale(1, 1)">
-        <div style="font-size: 24px;" class="antialias">
-        <div align="center"><a href="https://aku.edu.tr/uzaktan-egitim-sistemi/" target="_blank">Üniversitemiz Uzaktan Öğrenim Sistemi hakkında bilgilendirme</a><br></div>
-        </div>
-        </div>
-        </div>
-
-        <div class="componentContainer " style="top: 60px; left: 108px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: 847px; height: 677.6px;">
-            <div class="transformContainer" style="-webkit-transform: scale(0.88, 0.88);
-            -moz-transform: scale(0.88, 0.88);
-            transform: scale(0.88, 0.88)">
-            <iframe src="https://aku.edu.tr/uzaktan-egitim-sistemi/" width="960" height="768"></iframe>
-            </div>
-            </div>
-</div>
-
-<div class="step box" data-x="13000" data-y="0">
-    <div class="componentContainer " style="top: 15px; left: 352px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
-        <div class="transformContainer" style="-webkit-transform: scale(1, 1);
-        -moz-transform: scale(1, 1);
-        transform: scale(1, 1)">
-        <div style="font-size: 24px;" class="antialias">
-        <a href="https://ogrenci.aku.edu.tr/" target="_blank">Öğrenci İşleri Daire Başkanlığı</a><br>
-        </div>
-        </div>
-        </div>
-
-        <div class="componentContainer " style="top: 57px; left: 87px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: 850px; height: 680px;">
-            <div class="transformContainer" style="-webkit-transform: scale(0.89, 0.89);
-            -moz-transform: scale(0.89, 0.89);
-            transform: scale(0.89, 0.89)">
-            <iframe src="https://ogrenci.aku.edu.tr/" width="960" height="768"></iframe>
-            </div>
-            </div>
-</div>
-
-<div class="step box" data-x="14000" data-y="1000">
-    <div class="componentContainer " style="top: 20px; left: 252px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
-        <div class="transformContainer" style="-webkit-transform: scale(1, 1);
-        -moz-transform: scale(1, 1);
-        transform: scale(1, 1)">
-        <div style="font-size: 24px;" class="antialias">
-        <a href="https://ogrenci.aku.edu.tr/wp-content/uploads/sites/97/2025/07/kilavuz2526-1.pdf" target="_blank">2025 -2026 ÖĞRETİM YILI ÖĞRENCİ KILAVUZU</a>
-        </div>
-        </div>
-        </div>
-
-        <div class="componentContainer " style="top: 67px; left: 87px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: 851px; height: 680.8px;">
-            <div class="transformContainer" style="-webkit-transform: scale(0.89, 0.89);
-            -moz-transform: scale(0.89, 0.89);
-            transform: scale(0.89, 0.89)">
-            <iframe src="https://ogrenci.aku.edu.tr/wp-content/uploads/sites/97/2025/07/kilavuz2526-1.pdf" width="960" height="768"></iframe>
-            </div>
-            </div>
-</div>
-
-<div class="step box" data-x="15000" data-y="0">
-    <div class="componentContainer " style="top: 11px; left: 293px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
-        <div class="transformContainer" style="-webkit-transform: scale(1, 1);
-        -moz-transform: scale(1, 1);
-        transform: scale(1, 1)">
-        <div style="font-size: 24px;" class="antialias">
-        <a href="https://uim.aku.edu.tr/" target="_blank">Uluslararası İlişkiler Uyg. ve Araş. Merkezi</a>
-        </div>
-        </div>
-        </div>
-
-        <div class="componentContainer " style="top: 46px; left: 75px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: 874px; height: 699.2px;">
-            <div class="transformContainer" style="-webkit-transform: scale(0.91, 0.91);
-            -moz-transform: scale(0.91, 0.91);
-            transform: scale(0.91, 0.91)">
-            <iframe src="https://uim.aku.edu.tr/" width="960" height="768"></iframe>
-            </div>
-            </div>
-</div>
-
-<div class="step box" data-x="16000" data-y="1000">
-    <div class="componentContainer " style="top: 11px; left: 293px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
-        <div class="transformContainer" style="-webkit-transform: scale(1, 1);
-        -moz-transform: scale(1, 1);
-        transform: scale(1, 1)">
-        <div align="center"><a href="https://obs.aku.edu.tr/" target="_blank">Öğrenci Bilgi Sistemi</a></div>
-        <br>
-        <div align="center" style="font-size: 24px;" class="antialias"><a href="https://apps.apple.com/tr/app/proliz-mobil/id1377651655?l=tr" target="_blank">App Store Mobil Uygulama Adresi</a></div>
-        <br>
-        <div align="center" style="font-size: 24px;" class="antialias"><a href="https://play.google.com/store/apps/details?id=com.prolizyazilim.mobil&hl=tr&gl=US" target="_blank">Google Play Store Mobil Uygulama Adresi</a></div>
-        </div>
-        <br>
-        <div align="center"><a href="https://ues.aku.edu.tr/" target="_blank">Uzaktan Eğitim Sistemi</a></div>
-        <br>
-        <div align="center" style="font-size: 24px;" class="antialias"><a href="https://apps.apple.com/tr/app/k365/id1606171662?l=tr" target="_blank">App Store Mobil Uygulama Adresi</a></div>
-        <br>
-        <div align="center" style="font-size: 24px;" class="antialias"><a href="https://play.google.com/store/apps/details?id=com.advancity.alms&gl=TR&pli=1" target="_blank">Google Play Store Mobil Uygulama Adresi</a></div>
-        </div>
-</div>
-     
-
-<div class="step box" data-x="17000" data-y="2000">
-    <div class="componentContainer " style="top: 23px; left: 349px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
-        <div class="transformContainer" style="-webkit-transform: scale(1, 1);
-        -moz-transform: scale(1, 1);
-        transform: scale(1, 1)">
-        <div style="font-size: 24px;" class="antialias">
-        <a href="https://sinanpasamyo.aku.edu.tr/" target="_blank">Sinanpaşa Meslek Yüksekokulu</a><br>
-        </div>
-        </div>
-        </div>
-
-        <div class="componentContainer " style="top: 70px; left: 95px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: 835px; height: 668px;">
-            <div class="transformContainer" style="-webkit-transform: scale(0.87, 0.87);
-            -moz-transform: scale(0.87, 0.87);
-            transform: scale(0.87, 0.87)">
-            <iframe src="https://sinanpasamyo.aku.edu.tr/" width="960" height="768"></iframe>
-            </div>
-            </div>
-</div>
-
-<div class="step box" data-x="18000" data-y="0">
-    <div class="componentContainer " style="top: 17px; left: 305px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
-        <div class="transformContainer" style="-webkit-transform: scale(1, 1);
-        -moz-transform: scale(1, 1);
-        transform: scale(1, 1)">
-        <div style="font-size: 24px;" class="antialias"><a href="https://sinanpasamyo.aku.edu.tr/wp-content/uploads/sites/14/2025/09/SinanpasaMYO20252026GuzDonemiDersProgrami.pdf" target="_blank">2025 – 2026 Güz Yarıyılı Ders Programı</a>
-        </div>
-        </div>
-        </div>
-
-        <div class="componentContainer " style="top: 64px; left: 78px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: 868px; height: 694.4px;">
-            <div class="transformContainer" style="-webkit-transform: scale(0.9, 0.9);
-            -moz-transform: scale(0.9, 0.9);
-            transform: scale(0.9, 0.9)">
-            <iframe src="https://sinanpasamyo.aku.edu.tr/wp-content/uploads/sites/14/2025/09/SinanpasaMYO20252026GuzDonemiDersProgrami.pdf" width="960" height="768"></iframe>
-            </div>
-            </div>
-</div>
-
-<div class="step box" data-x="19000" data-y="1000">
-    <div class="componentContainer " style="top: 267px; left: 150px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
-        <div class="transformContainer" style="-webkit-transform: scale(1, 1);
-        -moz-transform: scale(1, 1);
-        transform: scale(1, 1)">
-        <div style="font-size: 100px;" class="antialias">
-        TEŞEKKÜRLER<br>
-        </div>
-        </div>
-        </div>
-</div>
-</div>
-
+<script>
+// Slayt konumlarını otomatik ata: her satırda 6 slayt, yılan (zig-zag) düzeninde.
+// Böylece slayt eklemek/çıkarmak için koordinatları elle değiştirmek gerekmez.
+(function () {
+	var adimlar = document.querySelectorAll("#impress > .step");
+	var SUTUN = 6, DX = 1200, DY = 950;
+	for (var i = 0; i < adimlar.length; i++) {
+		var satir = Math.floor(i / SUTUN);
+		var sutun = i % SUTUN;
+		if (satir % 2 === 1) { sutun = SUTUN - 1 - sutun; }
+		adimlar[i].setAttribute("data-x", sutun * DX);
+		adimlar[i].setAttribute("data-y", satir * DY);
+	}
+})();
+</script>
 <script src="js/impress.js"></script>
 <script>
 impress().init();
 </script>
 </body>
+</html>
